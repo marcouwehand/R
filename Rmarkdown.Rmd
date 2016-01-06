@@ -20,3 +20,18 @@ plot(cars)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r more plotting}
+names(cars)
+cars$speed
+cars$dist
+sorted_cars <- sort(cars$dist)
+sorted_cars
+plot(sorted_cars)
+plot(cars$dist)
+?lines
+plot(cars, las = 1)
+lines(lowess(cars), col = "red")
+lines(lowess(cars$speed, cars$dist), col = "blue")
+```
+
